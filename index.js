@@ -28,7 +28,7 @@ server.get('/', logger, (req, res) => {
   res.send(`<h2>GLOBAL SERVER UP ENDPOINT</h2>`);
 });
 
-server.use('/api/dataAccess', dataAccessRouter);
+server.use('/api', dataAccessRouter);
 
 
 //LISTEN SERVER
