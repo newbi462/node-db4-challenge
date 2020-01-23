@@ -3,7 +3,7 @@ exports.seed = function(knex, Promise) {
     .then(function () {
       return knex("steps").insert([
         {
-          quantity: "COOK DAM YOU"
+          steps: "COOK DAM YOU"
         },
 
       ]);
