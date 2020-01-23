@@ -21,14 +21,14 @@ server.use(express.json());
 server.use(logger);
 
 //ROUTES
-//const projectRouter = require('./routes/projectRouter.js');
+const dataAccessRouter = require('./routes/dataAccessRouter.js');
 
 //ENDPOINTS
 server.get('/', logger, (req, res) => {
   res.send(`<h2>GLOBAL SERVER UP ENDPOINT</h2>`);
 });
 
-//server.use('/api/projectURL', projectRouter);
+server.use('/api/dataAccess', dataAccessRouter);
 
 
 //LISTEN SERVER
