@@ -16,7 +16,7 @@ function getShoppingList(passedrecipe_id) {
     .join("recipeIngredientPair", "ingredientLinkQty.recipeIngredientPairID", "recipeIngredientPair.id" )
     .join("ingredient", "recipeIngredientPair.ingredientID", "ingredient.id" )
     .select("quantity.quantity", "ingredient.ingredient")
-    .where("recipeIngredientPair.recipe_id", passedrecipe_id);
+    .where("recipeIngredientPair.recipeID", passedrecipe_id);
 }
 
 /*
